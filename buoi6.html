@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 6</title>
+    <style>
+        p {
+            color: #FF00FF;
+            font-style: italic;
+        }
+        /* <selector> {
+            Các thuộc tính;
+            tên thuộc tính: giá trị thuộc tính;    
+        } */
+        #the_h1 {
+            color: #123456;
+            background: #cf85ec;
+        }
+        .the_heading {
+            color: rgb(244, 247, 118);
+            background: #563248;
+        }
+    </style>
+    <link rel="stylesheet" href="css/buoi6.css">
+</head>
+<body>
+    <!-- Các cách viết của css -->
+    <!-- Cách viết các thuộc tính của css: tên thuộc tính: giá trị thuộc tính; -->
+    <!-- 1. Inline: viết cho từng thẻ 1 - thuộc tính style của html -->
+    <!-- 2. Internal: viết bằng thẻ style trong bộ thẻ head -->
+    <!-- 3. External: viết css sang file khác sau đó nhúng vào file html
+        Nhúng file css vào file html: link
+    -->
+    <!-- Có 3 loại selector chính: tagname, id, class
+        tagname: <tagname> {
+                                Các thuộc tính;
+                 }
+                #<id> {
+                    Các thuộc tính;
+                }
+                .<class> {
+                    Các thuộc tính;    
+                }
+    -->
+    <!-- Độ ưu tiên của các cách viết css: format theo cái gần nhất
+        1. inline
+        2. internal || external
+        3. default
+    -->
+    <p style="color: red; font-weight: bold;">
+        Đây là thẻ p
+    </p>
+    <p>
+        Đây là thẻ đoạn văn
+    </p>
+    <p>
+        Đây là thẻ paragraph
+    </p>
+    <h1 id="the_h1">
+        Đây là thẻ h1
+    </h1>
+    <h2 class="the_heading">
+        Đây là thẻ h2
+    </h2>
+    <h3 class="the_heading">
+        Đây là thẻ h3
+    </h3>
+</body>
+</html>

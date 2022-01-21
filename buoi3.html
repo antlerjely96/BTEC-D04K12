@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buổi 3</title>
+  </head>
+  <body>
+    <!-- Tạo ra bảng: table -->
+    <!-- Tạo ra từng hàng của bảng: tr - table row -->
+    <!-- Tạo từng cột: td - table data -->
+    <!-- Tạo tiêu đề của cột: th - table heading -->
+    <!-- Gộp cột liền nhau trong 1 dòng: thuộc tính colspan -->
+    <!-- Gộp các cột thẳng nhau ở các dòng liền nhau: rowspan -->
+    <!-- align: căn theo chiều ngang - 3 giá trị: left, center, right -->
+    <!-- valign: căn theo chiều dọc - 3 giá trị: top, middle, bottom -->
+    <table
+      border="1px"
+      width="80%"
+      height="500px"
+      cellspacing="0px"
+      cellpadding="0px"
+    >
+    <caption>Danh sách</caption>
+      <tr>
+        <td colspan="5">Danh sách sv</td>
+      </tr>
+      <tr valign="bottom">
+        <th>Mã sv</th>
+        <th>Tên sv</th>
+        <th colspan="3">Thông tin cá nhân</th>
+      </tr>
+      <tr align="right">
+        <td valign="bottom">1</td>
+        <td>a</td>
+        <td>10/10/2000</td>
+        <td>0123456789</td>
+        <td rowspan="2">HN</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>c</td>
+        <td>5/5/2000</td>
+        <td>0123456787</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>b</td>
+        <td>1/1/2000</td>
+        <td>0123456788</td>
+        <td>HP</td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          <table
+            border="1px"
+            cellspacing="0"
+            cellpadding="0"
+            width="80%"
+            height="80%"
+          >
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
