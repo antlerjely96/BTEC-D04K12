@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 11</title>
+    <style>
+        /* position: static, relative, absolute, fixed
+            static: mặc định
+            relative: vị trí tuyệt đối so với vị trí ban đầu (static)
+            absolute: vị trí tương đối so với các phần tử chứa nó có position relative || absolute, nếu các phần tử chứa nó k có relative || absolute thì sẽ tính theo body
+            fixed: vị trí tuyệt đối trên màn hình
+            z-index: xét vị trí trên || dưới cho các phần tử
+            overflow: tạo thanh cuộn
+        */
+        #div-1 {
+            background: red;
+            width: 60%;
+            height: 1000px;
+            position: absolute;
+        }
+        #div-2 {
+            background: greenyellow;
+            width: 60%;
+            height: 100px;
+            position: relative;
+            top: 50px;
+            left: 10px;
+        }
+        #div-3 {
+            background: blueviolet;
+            width: 60%;
+            height: 60%;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            z-index: -1;
+        }
+        #div-4 {
+            background: pink;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            overflow: scroll;
+        }
+        #div-5 {
+            background: blue;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+        }
+        p {
+            width: 1000px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-1">
+        <div id="div-5">
+            <div id="div-3"></div>
+        </div>
+    </div>
+    <div id="div-2">
+        <div id="div-4">
+            <p>
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+                Đây là div Đây là div Đây là div
+            </p>
+        </div>
+    </div>
+</body>
+</html>
