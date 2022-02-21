@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 12</title>
+    <style>
+        /* pseudo style: class, element
+            pseudo-class: viết cho thẻ
+            <selector>:<pseudo-class> {
+                Các thuộc tính
+            }
+            VD: a:link {
+
+            }
+
+            pseudo-element: viết cho nội dung của thẻ
+            <selector>::<pseudo-element> {
+                Các thuộc tính;
+            }
+        */
+        
+        
+        /* p:hover {
+            color: blueviolet;
+        }
+        p:first-child {
+            color: cadetblue;
+        }
+        div:first-child p {
+            color: chartreuse;
+        }
+        p::first-letter {
+            font-style: italic;
+            font-weight: bold;
+        } */
+        /* combinator */
+        /* 
+        VD:
+            Viết cho các thẻ p nằm trong thẻ div k phân biết cấp độ
+            div p {
+
+            }
+            Viết cho các thẻ p là con của thẻ div
+            div>p {
+
+            }
+            Viết cho các thẻ p nằm ngoài thẻ div && nằm đầu tiên sau thẻ div && cùng cấp vs div
+            div+p {
+
+            }
+            Viết cho các thẻ p nằm ngoài thẻ div && nằm sau thẻ div && cùng cấp vs div
+            div~p {
+
+            }
+        */
+        div > p {
+            color: chocolate;
+        }
+        div + p {
+            color: cornflowerblue;
+        }
+        div ~ p {
+            color: red;
+        }
+        /* attr selector:
+            <selector>[<attr>] {
+                Các thuộc tính;
+            }
+            <selector>[<attr> = "<giá trị của thuộc tính>"] {
+                Các thuộc tính;
+            }
+        */
+        p[title] {
+            text-decoration: line-through;
+        }
+        p[title = "p3"] {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p>Đây là p1</p>
+    <p>Đây là p2</p>
+    <p title="p3">Đây là p3</p>
+    <div>
+        <p>Đây là p4</p>
+        <p>Đây là p5</p>
+        <p>Đây là p6</p>
+        <nav>
+            <p title="p7">Đây là p7</p>
+        </nav>
+    </div>
+    <p>Đây là p8</p>
+    <p>Đây là p9</p>
+    <nav>
+        <p>Đây là p10</p>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 14</title>
+    <script>
+        // condition: if, if - else, if - else if - else, nested if, switch - case
+        /* 
+            if:
+                if(điều kiện){
+                    khối lệnh;
+                }
+            if - else
+                if(điều kiện){
+                    khối lệnh 1;
+                }
+                else {
+                    khối lệnh 2;
+                }
+            if - else if - else
+                if(điều kiện 1){
+                    khối lệnh 1;
+                }
+                else if(điều kiện 2){
+                    khối lệnh 2;
+                }
+                else if(điều kiện 3){
+                    khối lệnh 3;
+                }
+                .
+                .
+                .
+                else {
+                    khối lệnh else;
+                }
+            nested if
+                if(điều kiện 1){
+                    if(điều kiện 2){
+                        if(điều kiện 3){
+                            khối lệnh if 3;
+                        }
+                        else {
+                            khối lệnh else 3;
+                        }
+                    }
+                    else {
+                        khối lệnh else 2;
+                    }
+                }
+                else if(điều kiện 4){
+                    if(điều kiện 5){
+                        khối lệnh if 5;
+                    }
+                    else {
+                        khối lệnh else 5;
+                    }
+                }
+                else {
+                    khối lệnh if 1;
+                }
+        */
+        /* VD: nhập 2 số a,b và tính thương a/b */
+        function tinh_thuong(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var thuong;
+            if (b == 0){
+                thuong = "không tính được";
+            }
+            else {
+                thuong = parseInt(a) / parseInt(b);
+            }
+            document.getElementById('kq').value = thuong;
+        }
+        function kiem_tra(){
+            var x = parseFloat(document.getElementById('x').value);
+            var y = parseFloat(document.getElementById('y').value);
+            var z = parseFloat(document.getElementById('z').value);
+            var kiem_tra;
+            if(x > 0 && y > 0 && z > 0){
+                if(x + y > z && x + z > y && y + z > x){
+                    kiem_tra = "x, y, z là cạnh tam giác";
+                }
+                else {
+                    kiem_tra = "x, y, z là không cạnh tam giác";
+                }
+            }
+            else {
+                kiem_tra = "x, y, z là không cạnh tam giác";
+            }
+            document.getElementById('kq_2').value = kiem_tra;
+        }
+        /*  Nhập 3 số a,b,c. 
+        Kiểm tra a,b,c có phải 3 cạnh tam giác không.
+        a > 0 && b > 0 && c > 0
+            a + b > c && a + c > 0 && b + c > 0
+        */
+
+        // loop: for, while, do - while, for - in, forEach
+        /* for:
+            for(điều kiện 1; điều kiện 2; điều kiện 3){
+                khối lệnh;
+            }
+        */
+        /* while
+            điều kiện 1;
+            while(điều kiện 2){
+                khối lệnh;
+                điều kiện 3;
+            }
+        */
+        /* do - while
+            điều kiện 1;
+            do {
+                khối lệnh;
+                điều kiện 3;
+            } while (điều kiện 2);
+        */
+        // VD: nhập số n. Tính n!
+        function n_gt(){
+            var n = parseFloat(document.getElementById('n').value);
+            var n_gt = 1;
+            if(n < 0){
+                n_gt = "không tồn tại";
+            }
+            else {
+                for(var i = 1; i <= n; i++){
+                    n_gt *= i;
+                }
+            }
+            document.getElementById('n_giai_thua').value = n_gt;
+        }
+        /* BTVN
+            1. Nhập 3 số a,b,c. Tính nghiệm pt: ax + b = c
+            2. Nhập số n. Tính tổng các số chẵn từ 0 đến n
+        */
+    </script>
+</head>
+<body>
+    a: <input type="text" id="a"><br>
+    b: <input type="text" id="b"><br>
+    kq: <input type="text" id="kq" readonly><br>
+    <button type="button" onclick="tinh_thuong()">Tính thương</button>
+    <br>
+    
+    x: <input type="text" id="x"><br>
+    y: <input type="text" id="y"><br>
+    z: <input type="text" id="z"><br>
+    kq: <input type="text" id="kq_2" readonly><br>
+    <button type="button" onclick="kiem_tra()">Kiểm tra</button>
+    <br>
+
+    n: <input type="text" id="n"><br>
+    n! = <input type="text" readonly id="n_giai_thua"><br>
+    <button type="button" onclick="n_gt()">Tính n!</button>
+</body>
+</html>
