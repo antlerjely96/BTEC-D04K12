@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 17</title>
+    <script>
+        function validate_demo(){
+            // regular expression (regex)
+            var dem = 0;
+            //Validate họ tên
+            var regex_ho_ten = /^[a-zA-ZàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬđĐèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆìÌỉỈĩĨíÍịỊòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰỳỲỷỶỹỸýÝỵỴ\s]+$/;
+            var ho_ten = document.getElementById('ho_ten').value;
+            var kq_ho_ten = regex_ho_ten.test(ho_ten);
+            if(ho_ten.length == 0){
+                document.getElementById('error_ho_ten').innerHTML = "Phải điền";
+                dem++;
+            }
+            else if(kq_ho_ten == false){
+                document.getElementById('error_ho_ten').innerHTML = "Tên không chứa chữ số hoặc ký tự đặc biệt";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ho_ten').innerHTML = "";
+            }
+            //Validate ngày sinh
+            var ngay_sinh = document.getElementById('ngay_sinh').value;
+            if(ngay_sinh.length == 0){
+                document.getElementById('error_ngay_sinh').innerHTML = "Phải điền";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ngay_sinh').innerHTML = "";
+            }
+            //Validate email
+            var regex_email = /^[a-zA-Z0-9]+[a-zA-Z0-9.]*@[a-z]{3,8}.[a-z]{3,4}[a-z.]*$/;
+            var email = document.getElementById('email').value;
+            var kq_email = regex_email.test(email);
+            if(email.length == 0){
+                document.getElementById('error_email').innerHTML = "Phải điền";
+                dem++;
+            }
+            else if(kq_email == false){
+                document.getElementById('error_email').innerHTML = "Email phải đúng định dạng";
+                dem++;
+            }
+            else {
+                document.getElementById('error_email').innerHTML = "";
+            }
+            //Validate ảnh
+            var anh = document.getElementById('anh').value;
+            if(anh.length == 0){
+                document.getElementById('error_anh').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_anh').innerHTML = "";
+            }
+            //Validate ghi chú
+            var ghi_chu = document.getElementById('ghi_chu').value;
+            if(anh.length == 0){
+                document.getElementById('error_ghi_chu').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ghi_chu').innerHTML = "";
+            }
+            // Validate giới tính
+            var gioi_tinh = document.getElementsByName('gioi_tinh');
+            var temp = 0;
+            for(var i = 0; i < gioi_tinh.length; i++){
+                if(gioi_tinh[i].checked){
+                    temp++;
+                }
+            }
+            if(temp == 0){
+                document.getElementById('error_gioi_tinh').innerHTML = "Phải chọn";
+            }
+            else {
+                document.getElementById('error_gioi_tinh').innerHTML = "";
+            }
+            // Validate sức khỏe
+            var suc_khoe = document.getElementById('suc_khoe').value;
+            if(suc_khoe == 0){
+                document.getElementById('error_suc_khoe').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_suc_khoe').innerHTML = "";
+            }
+            // Validate số điện thoại
+            var so_dien_thoai = document.getElementById('so_dien_thoai').value;
+            var regex_so_dien_thoai = /^0[0-9]{9,10}$/;
+            var kq_so_dien_thoai = regex_so_dien_thoai.test(so_dien_thoai);
+            if(so_dien_thoai.length == 0){
+                document.getElementById('error_so_dien_thoai').innerHTML = "Phải nhập";
+                dem++;
+            }
+            else if(kq_so_dien_thoai == false){
+                document.getElementById('error_so_dien_thoai').innerHTML = "Phải nhập đúng số điện thoại";
+                dem++;
+            }
+            else {
+                document.getElementById('error_so_dien_thoai').innerHTML = "";
+            }
+            // 
+            if(dem != 0){
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="buoi14.html" method="get">
+        Họ tên: <input type="text" id="ho_ten"> <span id="error_ho_ten"></span><br>
+        Ngày Sinh: <input type="date" id="ngay_sinh"> <span id="error_ngay_sinh"></span><br>
+        Email: <input type="email" id="email"> <span id="error_email"></span><br>
+        Số điện thoại: <input type="text" id="so_dien_thoai"> <span id="error_so_dien_thoai"></span><br>
+        Giới tính: <input type="radio" name="gioi_tinh"> Nam <input type="radio" name="gioi_tinh"> Nữ <input type="radio" name="gioi_tinh"> khác <span id="error_gioi_tinh"></span><br>
+        Ảnh: <input type="file" id="anh"> <span id="error_anh"></span><br>
+        Tính trạng sức khỏe: <select id="suc_khoe">
+            <option value="0"> - Chọn - </option>
+            <option value="1">bình thường</option>
+            <option value="2">Có vấn đề</option>
+        </select> <span id="error_suc_khoe"></span><br>
+        Ghi chú: <textarea id="ghi_chu"></textarea> <span id="error_ghi_chu"></span><br>
+        <button onclick="return validate_demo()">Submit</button>
+    </form>
+</body>
+</html>

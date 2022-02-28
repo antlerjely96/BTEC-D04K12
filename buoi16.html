@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 16</title>
+    <script>
+        function validate_demo(){
+            var dem = 0;
+            //Validate họ tên
+            var ho_ten = document.getElementById('ho_ten').value;
+            if(ho_ten.length == 0){
+                document.getElementById('error_ho_ten').innerHTML = "Phải điền";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ho_ten').innerHTML = "";
+            }
+            //Validate ngày sinh
+            var ngay_sinh = document.getElementById('ngay_sinh').value;
+            if(ngay_sinh.length == 0){
+                document.getElementById('error_ngay_sinh').innerHTML = "Phải điền";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ngay_sinh').innerHTML = "";
+            }
+            //Validate email
+            var email = document.getElementById('email').value;
+            if(email.length == 0){
+                document.getElementById('error_email').innerHTML = "Phải điền";
+                dem++;
+            }
+            else {
+                document.getElementById('error_email').innerHTML = "";
+            }
+            //Validate ảnh
+            var anh = document.getElementById('anh').value;
+            if(anh.length == 0){
+                document.getElementById('error_anh').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_anh').innerHTML = "";
+            }
+            //Validate ghi chú
+            var ghi_chu = document.getElementById('ghi_chu').value;
+            if(anh.length == 0){
+                document.getElementById('error_ghi_chu').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_ghi_chu').innerHTML = "";
+            }
+            // Validate giới tính
+            var gioi_tinh = document.getElementsByName('gioi_tinh');
+            var temp = 0;
+            for(var i = 0; i < gioi_tinh.length; i++){
+                if(gioi_tinh[i].checked){
+                    temp++;
+                }
+            }
+            if(temp == 0){
+                document.getElementById('error_gioi_tinh').innerHTML = "Phải chọn";
+            }
+            else {
+                document.getElementById('error_gioi_tinh').innerHTML = "";
+            }
+            // Validate sức khỏe
+            var suc_khoe = document.getElementById('suc_khoe').value;
+            if(suc_khoe == 0){
+                document.getElementById('error_suc_khoe').innerHTML = "Phải chọn";
+                dem++;
+            }
+            else {
+                document.getElementById('error_suc_khoe').innerHTML = "";
+            }
+            // 
+            if(dem != 0){
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="buoi14.html" method="get">
+        Họ tên: <input type="text" id="ho_ten"> <span id="error_ho_ten"></span><br>
+        Ngày Sinh: <input type="date" id="ngay_sinh"> <span id="error_ngay_sinh"></span><br>
+        Email: <input type="email" id="email"> <span id="error_email"></span><br>
+        Giới tính: <input type="radio" name="gioi_tinh"> Nam <input type="radio" name="gioi_tinh"> Nữ <input type="radio" name="gioi_tinh"> khác <span id="error_gioi_tinh"></span><br>
+        Ảnh: <input type="file" id="anh"> <span id="error_anh"></span><br>
+        Tính trạng sức khỏe: <select id="suc_khoe">
+            <option value="0"> - Chọn - </option>
+            <option value="1">bình thường</option>
+            <option value="2">Có vấn đề</option>
+        </select> <span id="error_suc_khoe"></span><br>
+        Ghi chú: <textarea id="ghi_chu"></textarea> <span id="error_ghi_chu"></span><br>
+        <button onclick="return validate_demo()">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 15</title>
+    <script>
+        // array
+        var arr = [];
+        var arr1 = [10, 5, 7, 3, 20, 30, 25];
+        var arr2 = new Array();
+        console.log(arr);
+        // function
+        function demo(){
+            var max = Number(arr1[0]);
+            for(var i = 0; i < arr1.length; i++){
+                if(max < Number(arr1[i])){
+                    max = Number(arr1[i]);
+                }
+            }
+            console.log(max);
+        }
+        // demo();
+        // Math object
+        // console.log(Math.round(Math.random() * 100));
+        // console.log(Math.floor(4.4));
+        // console.log(Math.floor(4.6));
+        // console.log(Math.ceil(4.3));
+        // console.log(Math.ceil(4.7));
+        // console.log(Math.round(10.1));
+        // console.log(Math.round(10.6));
+        
+        /* BTVN:
+            Cho mảng arr có 10 phần tử (tự gán).
+            Sắp xếp mảng theo chiều tăng dần
+        */
+        /* BT1:
+            Cho mảng arr có 10 phần tử.
+            Hiển thị các phần tử là số nguyên tố
+        */
+        function kt(){
+            for(var i = 0; i < arr1.length; i++){
+                var dem = 0;
+                for(var j = 2; j < arr1[i]; j++){
+                    if(arr1[i] % j == 0){
+                        dem++;
+                    }
+                }
+                if(dem == 0){
+                    console.log(arr1[i]);
+                }
+            }
+        }
+        kt();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
